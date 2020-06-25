@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   # get 'restaurants/index'
   # get 'restaurants/show'
-  resources :restaurants, only:[:index,:show] do
+  resources :restaurants, only:[:index,:show, :destroy] do
     resources :reviews, only: :create
   end
 
